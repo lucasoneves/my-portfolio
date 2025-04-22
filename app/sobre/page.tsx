@@ -1,23 +1,8 @@
-import Image from "next/image";
-
-import "@/public/avatar.jpg";
-
 export default function About() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      {/* Avatar ou ilustração */}
-      <div className="flex justify-center md:justify-start">
-        <Image
-          src={"/avatar.jpg"} // substitua por sua imagem em public/
-          alt="Foto de perfil"
-          width={200}
-          height={200}
-          className="rounded-full shadow-md"
-        />
-      </div>
-
+    <section className="grid grid-cols-1 gap-8 items-start">
       {/* Texto principal */}
-      <div className="md:col-span-2 space-y-4">
+      <div className="space-y-4">
         <h1 className="text-3xl font-bold">Sobre mim</h1>
 
         <p>
@@ -65,7 +50,7 @@ export default function About() {
             ].map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-gray-100 text-sm rounded-full border border-gray-200"
+                className="px-3 py-1 bg-gray-600 text-sm rounded-full border border-gray-100"
               >
                 {tech}
               </span>
