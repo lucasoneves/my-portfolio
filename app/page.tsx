@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { MainButton } from "@/components/ui/MainButton";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -35,7 +34,6 @@ export default function Home() {
             href="/projetos#projeto1"
             className="border border-gray-300 rounded-xl p-4 hover:shadow-md transition"
           >
-            <Image src={} />
             <h3 className="font-bold text-lg">Projeto 1 - Nome</h3>
             <p className="text-gray-300 text-sm">
               Breve descrição do projeto, tecnologias usadas e objetivo.
