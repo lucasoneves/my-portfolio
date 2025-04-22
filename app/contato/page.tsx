@@ -1,7 +1,7 @@
 "use client";
 
-import { MainButton } from "@/components/MainButton";
-import { SocialLinks } from "@/components/SocialLinks";
+import { MainButton } from "@/components/ui/MainButton";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { useState } from "react";
 
 export default function ContatoPage() {

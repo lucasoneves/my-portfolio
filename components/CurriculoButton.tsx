@@ -1,4 +1,4 @@
-import { MainButton } from "@/components/MainButton";
+import { MainButton } from "@/components/ui/MainButton";
 import { Download as IconDownload } from "lucide-react";
 
 export default function CurriculoButton() {
