@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainButton } from "@/components/ui/MainButton";
 import ProjectCard from "@/components/ProjectCard";
 import LinkSection from "@/components/LinkSection";
+import projectsData from "@/data/projects";
 
 export default function Home() {
   return (
@@ -31,16 +32,14 @@ export default function Home() {
       <section className="my-20 flex flex-col gap-5">
         <h2 className="text-2xl font-semibold">Projetos em destaque</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <ProjectCard
-            path="/projetos/projeto-1"
-            title="Projeto 1"
-            description="Descrição do projeto 1"
-          />
-          <ProjectCard
-            path="/projetos/projeto-2"
-            title="Projeto 2"
-            description="Descrição do projeto 2"
-          />
+          {projectsData.items.map((projetc) => (
+            <ProjectCard
+              key={projetc.id}
+              path="/projetos/projeto-1"
+              title={projetc.label}
+              description={projetc.description}
+            />
+          ))}
         </div>
         <LinkSection path="/projetos" title="Ver todos os projetos" />
       </section>
