@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full py-4 bg-neutral-900 px-8 shadow-md sticky top-0 z-50">
+    <header className="w-full py-4 bg-neutral-900 px-4 shadow-md sticky top-0 z-50">
       <nav className="flex justify-between items-center max-w-5xl mx-auto">
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/" className="text-lg sm:text-xl font-bold">
           Lucas Neves
         </Link>
-        <ul className="flex gap-6 text-sm font-medium">
+        <ul className="flex gap-6 text-md font-medium">
           <li>
             <Link href="/projetos" className="hover:underline">
               Projetos

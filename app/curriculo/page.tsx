@@ -10,7 +10,7 @@ export default function Curriculo() {
 
       <div className="mt-8 space-y-2 ">
         <h2 className="text-xl font-semibold">Resumo Profissional</h2>
-        <p>
+        <p className="text-gray-400">
           Desenvolvedor Front-End com ampla experiência na criação e manutenção
           de interfaces web responsivas e eficazes. Atuo desde 2014 com foco em
           entregar soluções de alta qualidade, colaborando com squads
@@ -39,7 +39,7 @@ export default function Curriculo() {
 
       <div className="mt-8 space-y-2 ">
         <h2 className="text-xl font-semibold mb-2">Formação Acadêmica</h2>
-        <p>
+        <p className="text-gray-400">
           <strong>Tecnologia em Sistemas para Internet</strong> (2010 - 2012) -
           Incompleto
           <br />
@@ -55,7 +55,7 @@ export default function Curriculo() {
             <div key={index}>
               <h3 className="font-bold text-lg">{exp.company}</h3>
               <p className="text-sm text-gray-400">{exp.period}</p>
-              <p>{exp.description}</p>
+              <p className="text-gray-400">{exp.description}</p>
             </div>
           ))}
         </div>

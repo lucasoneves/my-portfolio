@@ -4,10 +4,10 @@ import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-10 space-y-16">
-      <section className="text-center space-y-4">
+    <>
+      <section className="text-center my-20">
         <h1 className="text-4xl font-bold">Olá! Eu sou Lucas Neves</h1>
-        <p className="text-lg text-gray-400 mb-10">
+        <p className="text-lg text-gray-400 my-5">
           Desenvolvedor Front-End com experiência em React, Vue, Next.js e foco
           em performance e acessibilidade.
         </p>
@@ -16,9 +16,9 @@ export default function Home() {
         </MainButton>
       </section>
 
-      <section className="space-y-2">
+      <section className="my-20">
         <h2 className="text-2xl font-semibold">Sobre mim</h2>
-        <p className="text-gray-400">
+        <p className="text-gray-400 my-5">
           Desde 2014, atuo como Desenvolvedor Front-End criando interfaces
           modernas e eficientes. Trabalho com frameworks como React, Vue e
           Next.js, com foco em qualidade, performance e acessibilidade.
@@ -28,7 +28,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="space-y-4">
+      <section className="my-20 flex flex-col gap-5">
         <h2 className="text-2xl font-semibold">Projetos em destaque</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <ProjectCard
@@ -47,15 +47,15 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="bg-gray-800 p-20 rounded-xl text-center">
+      <section className="bg-gray-800 py-10 px-6 sm:p-20 rounded-xl text-center">
         <h2 className="text-2xl font-semibold mb-2">Entre em contato</h2>
         <p className="text-gray-400 mb-4">
           Vamos conversar sobre como posso ajudar no seu projeto.
         </p>
-        <MainButton>
+        <MainButton className="w-full sm:w-auto">
           <Link href="/contato">Entrar em contato</Link>
         </MainButton>
       </section>
-    </main>
+    </>
   );
 }

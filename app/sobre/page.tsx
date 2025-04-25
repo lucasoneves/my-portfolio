@@ -5,19 +5,19 @@ export default function About() {
       <div className="space-y-4">
         <h1 className="text-3xl font-bold">Sobre mim</h1>
 
-        <p>
+        <p className="text-gray-400">
           Desde 2014, atuo como Desenvolvedor Front-End com sólida experiência
           em construção de interfaces modernas e funcionais para a web.
         </p>
 
-        <p>
+        <p className="text-gray-400">
           Tenho domínio de <strong>HTML5</strong>, <strong>CSS3</strong> e{" "}
           <strong>Sass</strong>. Trabalho com <strong>JavaScript</strong> e
           frameworks como <strong>Vue.js</strong>, <strong>React</strong> e{" "}
           <strong>Next.js</strong>.
         </p>
 
-        <p>
+        <p className="text-gray-400">
           Também possuo experiência com <strong>Gulp</strong>,{" "}
           <strong>Webpack</strong>, <strong>Parcel</strong> e conhecimentos
           básicos em <strong>Node.js</strong>. Já atuei com <strong>SEO</strong>
@@ -25,7 +25,7 @@ export default function About() {
           <strong>deploy</strong> e <strong>CI/CD</strong>.
         </p>
 
-        <p>
+        <p className="text-gray-400">
           Trabalho bem em equipes ágeis, com metodologias como Scrum e Kanban,
           focando sempre na entrega de código limpo, performático e escalável.
         </p>

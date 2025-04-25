@@ -58,7 +58,7 @@ export default function ContatoPage() {
             id="nome"
             name="nome"
             required
-            className="w-full border border-white rounded p-2"
+            className="w-3xl border border-gray-600 rounded p-2"
           />
         </div>
         <div>
@@ -70,7 +70,7 @@ export default function ContatoPage() {
             id="email"
             name="email"
             required
-            className="w-full border rounded p-2"
+            className="w-3xl border border-gray-600 rounded p-2"
           />
         </div>
         <div>
@@ -82,7 +82,7 @@ export default function ContatoPage() {
             name="mensagem"
             rows={5}
             required
-            className="w-full border rounded p-2"
+            className="w-3xl border border-gray-600 rounded p-2"
           ></textarea>
         </div>
         <MainButton

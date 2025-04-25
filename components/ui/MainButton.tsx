@@ -42,7 +42,7 @@ export const MainButton: React.FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled || isLoading}
       className={clsx(
-        "rounded-xl cursor-pointer font-medium transition-all duration-200 focus:outline-none px-6",
+        "rounded-xl cursor-pointer font-medium transition-all duration-200 focus:outline-none px-6 py-3 w-full sm:w-auto",
         variantStyles[variant],
         sizeStyles[size],
         disabled || isLoading ? "opacity-50 cursor-not-allowed" : "",
