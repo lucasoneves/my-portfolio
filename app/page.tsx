@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MainButton } from "@/components/ui/MainButton";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
@@ -30,24 +31,16 @@ export default function Home() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Projetos em destaque</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link
-            href="/projetos#projeto1"
-            className="border border-gray-300 rounded-xl p-4 hover:shadow-md transition"
-          >
-            <h3 className="font-bold text-lg">Projeto 1 - Nome</h3>
-            <p className="text-gray-300 text-sm">
-              Breve descrição do projeto, tecnologias usadas e objetivo.
-            </p>
-          </Link>
-          <Link
-            href="/projetos#projeto2"
-            className="border border-gray-300 rounded-xl p-4 hover:shadow-md transition"
-          >
-            <h3 className="font-bold text-lg">Projeto 2 - Nome</h3>
-            <p className="text-gray-300 text-sm">
-              Outro projeto com destaque para performance, acessibilidade e UI.
-            </p>
-          </Link>
+          <ProjectCard
+            path="/projetos/projeto-1"
+            title="Projeto 1"
+            description="Descrição do projeto 1"
+          />
+          <ProjectCard
+            path="/projetos/projeto-2"
+            title="Projeto 2"
+            description="Descrição do projeto 2"
+          />
         </div>
         <Link href="/projetos" className="text-blue-600 hover:underline">
           Ver todos os projetos →
