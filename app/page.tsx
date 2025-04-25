@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MainButton } from "@/components/ui/MainButton";
 import ProjectCard from "@/components/ProjectCard";
+import LinkSection from "@/components/LinkSection";
 
 export default function Home() {
   return (
@@ -23,9 +24,8 @@ export default function Home() {
           modernas e eficientes. Trabalho com frameworks como React, Vue e
           Next.js, com foco em qualidade, performance e acessibilidade.
         </p>
-        <Link href="/sobre" className="text-blue-600 hover:underline">
-          Saiba mais sobre minha trajetória →
-        </Link>
+
+        <LinkSection path="/sobre" title="Saiba mais sobre minha trajetória" />
       </section>
 
       <section className="my-20 flex flex-col gap-5">
@@ -42,9 +42,7 @@ export default function Home() {
             description="Descrição do projeto 2"
           />
         </div>
-        <Link href="/projetos" className="text-blue-600 hover:underline">
-          Ver todos os projetos →
-        </Link>
+        <LinkSection path="/projetos" title="Ver todos os projetos" />
       </section>
 
       <section className="bg-gray-800 py-10 px-6 sm:p-20 rounded-xl text-center">

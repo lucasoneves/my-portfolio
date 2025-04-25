@@ -47,7 +47,7 @@ export default function ContatoPage() {
 
       <SocialLinks />
 
-      <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+      <form onSubmit={handleSubmit} className="space-y-4 mt-4 w-full md:w-2xl">
         <h3 className="text-xl font-bold mb-4 mt-8">Formulário de contato</h3>
         <div>
           <label htmlFor="nome" className="block font-semibold">
@@ -58,7 +58,7 @@ export default function ContatoPage() {
             id="nome"
             name="nome"
             required
-            className="w-3xl border border-gray-600 rounded p-2"
+            className="w-full border border-gray-600 rounded p-2"
           />
         </div>
         <div>
@@ -70,7 +70,7 @@ export default function ContatoPage() {
             id="email"
             name="email"
             required
-            className="w-3xl border border-gray-600 rounded p-2"
+            className="w-full border border-gray-600 rounded p-2"
           />
         </div>
         <div>
@@ -82,7 +82,7 @@ export default function ContatoPage() {
             name="mensagem"
             rows={5}
             required
-            className="w-3xl border border-gray-600 rounded p-2"
+            className="w-full border border-gray-600 rounded p-2"
           ></textarea>
         </div>
         <MainButton
