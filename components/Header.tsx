@@ -1,5 +1,6 @@
 // components/Header.tsx
 import Link from "next/link";
+import MenuList from "./MenuList";
 
 export default function Header() {
   return (
@@ -8,28 +9,7 @@ export default function Header() {
         <Link href="/" className="text-lg sm:text-xl font-bold">
           Lucas Neves
         </Link>
-        <ul className="flex gap-6 text-md font-medium">
-          <li>
-            <Link href="/projetos" className="hover:underline">
-              Projetos
-            </Link>
-          </li>
-          <li>
-            <Link href="/sobre" className="hover:underline">
-              Sobre
-            </Link>
-          </li>
-          <li>
-            <Link href="/curriculo" className="hover:underline">
-              Currículo
-            </Link>
-          </li>
-          <li>
-            <Link href="/contato" className="hover:underline">
-              Contato
-            </Link>
-          </li>
-        </ul>
+        <MenuList />
       </nav>
     </header>
   );
