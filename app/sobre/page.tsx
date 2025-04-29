@@ -3,7 +3,7 @@ export default function About() {
     <section className="grid grid-cols-1 gap-8 items-start">
       {/* Texto principal */}
       <div className="space-y-4">
-        <h1 className="text-3xl font-bold">Sobre mim</h1>
+        <h1 className="text-3xl font-bold">Sobre Mim</h1>
 
         <p className="text-gray-400">
           Desde 2014, atuo como Desenvolvedor Front-End com sólida experiência
@@ -50,7 +50,7 @@ export default function About() {
             ].map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-gray-600 text-sm rounded-full border border-gray-100"
+                className="px-3 py-1 bg-gray-600 text-sm rounded-full border border-gray-400"
               >
                 {tech}
               </span>

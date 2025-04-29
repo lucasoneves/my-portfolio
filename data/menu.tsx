@@ -1,7 +1,7 @@
 const menuData = {
   items: [
     { label: "Projetos", href: "/projetos" },
-    { label: "Sobre", href: "/sobre" },
+    { label: "Sobre Mim", href: "/sobre" },
     { label: "Currículo", href: "/curriculo" },
     { label: "Contato", href: "/contato" },
   ],

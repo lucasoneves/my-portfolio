@@ -2,7 +2,15 @@ import Link from "next/link";
 import { MainButton } from "@/components/ui/MainButton";
 import ProjectCard from "@/components/ProjectCard";
 import LinkSection from "@/components/LinkSection";
-import projectsData from "@/data/projects";
+
+import { datoCMSClient } from "@/util/datocms";
+import { PROJECTS_QUERY } from "@/util/queries";
+
+const data = await datoCMSClient.request(PROJECTS_QUERY);
+
+const projects = data.allProjects;
+
+console.log(projects);
 
 export default function Home() {
   return (
@@ -32,12 +40,12 @@ export default function Home() {
       <section className="my-20 flex flex-col gap-5">
         <h2 className="text-2xl font-semibold">Projetos em destaque</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          {projectsData.items.map((projetc) => (
+          {projects.map((project) => (
             <ProjectCard
-              key={projetc.id}
-              path="/projetos/projeto-1"
-              title={projetc.label}
-              description={projetc.description}
+              key={project.id}
+              path={project.href}
+              title={project.title}
+              description={project.description}
             />
           ))}
         </div>
