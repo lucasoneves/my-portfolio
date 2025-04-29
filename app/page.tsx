@@ -3,10 +3,21 @@ import { MainButton } from "@/components/ui/MainButton";
 import ProjectCard from "@/components/ProjectCard";
 import LinkSection from "@/components/LinkSection";
 
-import { datoCMSClient } from "@/util/datocms";
-import { PROJECTS_QUERY } from "@/util/queries";
+import { datoCMSClient } from "@/utils/datocms";
+import { PROJECTS_QUERY } from "@/utils/queries";
 
-const data = await datoCMSClient.request(PROJECTS_QUERY);
+type Project = {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+};
+
+type ProjectsResponse = {
+  allProjects: Project[];
+};
+
+const data = await datoCMSClient.request<ProjectsResponse>(PROJECTS_QUERY);
 
 const projects = data.allProjects;
 
