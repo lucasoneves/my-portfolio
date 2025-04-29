@@ -5,23 +5,11 @@ import LinkSection from "@/components/LinkSection";
 
 import { datoCMSClient } from "@/utils/datocms";
 import { PROJECTS_QUERY } from "@/utils/queries";
-
-type Project = {
-  id: string;
-  title: string;
-  description: string;
-  href: string;
-};
-
-type ProjectsResponse = {
-  allProjects: Project[];
-};
+import { ProjectsResponse } from "@/utils/types";
 
 const data = await datoCMSClient.request<ProjectsResponse>(PROJECTS_QUERY);
 
 const projects = data.allProjects;
-
-console.log(projects);
 
 export default function Home() {
   return (
