@@ -10,7 +10,7 @@ const data = await datoCMSClient.request<ProjectsResponse>(PROJECTS_QUERY);
 
 const projects = data.allProjects;
 
-export function Projects() {
+const Projects = () => {
   return (
     <section className="my-20 flex flex-col gap-5">
       <h2 className="text-2xl font-semibold">Projetos em destaque</h2>
@@ -27,9 +27,9 @@ export function Projects() {
       <LinkSection path="/projetos" title="Ver todos os projetos" />
     </section>
   );
-}
+};
 
-export function Summary() {
+const Summary = () => {
   return (
     <section className="text-center my-20">
       <h1 className="text-4xl font-bold">Olá! Eu sou Lucas Neves</h1>
@@ -40,9 +40,9 @@ export function Summary() {
       <MainLinkButton title="Ver Projetos" path="/projetos" />
     </section>
   );
-}
+};
 
-export function About() {
+const About = () => {
   return (
     <section className="my-20">
       <h2 className="text-2xl font-semibold">Sobre mim</h2>
@@ -55,9 +55,9 @@ export function About() {
       <LinkSection path="/sobre" title="Saiba mais sobre minha trajetória" />
     </section>
   );
-}
+};
 
-export function Contact() {
+const Contact = () => {
   return (
     <section className="bg-gray-800 py-10 px-6 sm:p-20 rounded-xl text-center">
       <h2 className="text-2xl font-semibold mb-2">Entre em contato</h2>
@@ -68,7 +68,7 @@ export function Contact() {
       <MainLinkButton title="Entrar em contato" path="/contato" />
     </section>
   );
-}
+};
 
 export default function Home() {
   return (
