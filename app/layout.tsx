@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { Inter } from "next/font/google";
 
 import { projectConfig } from "@/utils/project-config";
 
@@ -11,6 +12,8 @@ export const metadata = {
   description: `Portfólio de ${projectConfig.name}, Desenvolvedor Front-End com experiência em React, Next.js, Vue, TypeScript e desenvolvimento de interfaces web modernas e responsivas`,
 };
 
+const inter = Inter({ subsets: ["latin"] });
+
 export default function RootLayout({
   children,
 }: {
@@ -18,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="bg-black text-gray-900">
+      <body className={`${inter.className} bg-black text-gray-900`}>
         <Header />
         <main className="max-w-5xl mx-auto px-4 py-12 min-h-screen">
           {children}
