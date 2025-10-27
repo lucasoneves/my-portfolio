@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import LinkSection from "@/components/LinkSection";
 
