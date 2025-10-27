@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { MainButton } from "@/components/ui/MainButton";
 import ProjectCard from "@/components/ProjectCard";
 import LinkSection from "@/components/LinkSection";
 
 import { datoCMSClient } from "@/utils/datocms";
 import { PROJECTS_QUERY } from "@/utils/queries";
 import { ProjectsResponse } from "@/utils/types";
+import MainLinkButton from "@/components/ui/MainLinkButton";
 
 const data = await datoCMSClient.request<ProjectsResponse>(PROJECTS_QUERY);
 
@@ -20,9 +20,7 @@ export default function Home() {
           Desenvolvedor Front-End com experiência em React, Vue, Next.js e foco
           em performance e acessibilidade.
         </p>
-        <MainButton>
-          <Link href="/projetos">Ver Projetos</Link>
-        </MainButton>
+        <MainLinkButton title="Ver Projetos" path="/projetos" />
       </section>
 
       <section className="my-20">
@@ -53,12 +51,11 @@ export default function Home() {
 
       <section className="bg-gray-800 py-10 px-6 sm:p-20 rounded-xl text-center">
         <h2 className="text-2xl font-semibold mb-2">Entre em contato</h2>
-        <p className="text-gray-400 mb-4">
+        <p className="text-gray-400 mb-6">
           Vamos conversar sobre como posso ajudar no seu projeto.
         </p>
-        <MainButton className="w-full sm:w-auto">
-          <Link href="/contato">Entrar em contato</Link>
-        </MainButton>
+
+        <MainLinkButton title="Entrar em contato" path="/contato" />
       </section>
     </>
   );
